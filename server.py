@@ -28,7 +28,7 @@ def start_here():
         <title>Start Here</title>
       </head>
       <body>
-        <a href="/hello">Take me to the start</a>
+        <a href="/hello">Let's get started!</a>
       </body>
     </html>
     """
@@ -42,14 +42,14 @@ def say_hello():
     <!doctype html>
     <html>
       <head>
-        <title>Hi There!</title>
+        <title>Hello There!</title>
       </head>
       <body>
-        <h1>Hi There!</h1>
+        <h1>Hello There!</h1>
         <form action='/process-hello'>
-          Would you rather be complimented or insulted? <br>
-          <input type="radio" name="niceormean" value="nice">A compliment, please! <br>
-          <input type="radio" name="niceormean" value="mean">I'll take an insult. CLOWN. <br>
+          Would you rather receive a compliment or be insulted? <br>
+          <input type="radio" name="niceormean" value="nice">I'll take a compliment! <br>
+          <input type="radio" name="niceormean" value="mean">Insult me! <br>
           <input type="submit">
         </form>
       </body>
@@ -74,9 +74,9 @@ def process_hello():
             <h2>Choose Your Insult Level:</h2>
             <form action="/select/insult">
               <select name="level">
-                <option value="1">Only a little bit.</option>
-                <option value="2">I'd like my insult to be medium-meanness.</option>
-                <option value="3">Do your worst!</option>
+                <option value="1">Don't be too mean to me. I'm a gentle flower.</option>
+                <option value="2">You can give me sh*t, but don't cross the line. Got it?</option>
+                <option value="3">Lay it on me! I can take your worst!</option>
               </select>
               <br>
               <input type="submit">
@@ -96,9 +96,9 @@ def process_hello():
             <h2>Choose Your Compliment Level:</h2>
             <form action="/select/compliment">
               <select name="level">
-                <option value="1">Just say something nice.</option>
-                <option value="2">I'd like a middle-of-the-road compliment.</option>
-                <option value="3">Say something really flattering!</option>
+                <option value="1">I'm shy, so not too sweet. </option>
+                <option value="2">I like praise, but don't go over the top.</option>
+                <option value="3">Nothing is too nice!!!</option>
               </select>
               <br>
               <input type="submit">
@@ -142,9 +142,9 @@ def display_insult_form():
         <title>Choose Insult</title>
       </head>
       <body>
-        <h1>Oh. It's You.</h1>
+        <h1>Oh, right, we were doing something...</h1>
 
-        <h3>Fill out this dinky form and choose something rude.</h3>
+        <h3>Ok, so fill out this silly form and choose so I can say something RUDE!</h3>
         
         <form action="/diss">
           What's your name? <input type="text" name="person">
@@ -152,7 +152,7 @@ def display_insult_form():
           <select name="insult">
             {}
           </select>
-          <input type="submit" value="Take Me to My Insult!">
+          <input type="submit" value="Show Me My Insult!">
         </form>
 
       </body>
@@ -192,9 +192,9 @@ def display_compliment_form():
         <title>Choose Compliment</title>
       </head>
       <body>
-        <h1>Hooray, It's You!</h1>
+        <h1>Yay! you made it!</h1>
 
-        <h3>Fill out this lil form and choose your compliment. :)</h3>
+        <h3>Fill this form out so I can give you a compliment! :)</h3>
         
         <form action="/greet">
           What's your name? <input type="text" name="person">
@@ -202,7 +202,7 @@ def display_compliment_form():
           <select name="compliment">
             {}
           </select>
-          <input type="submit" value="Take Me to My Compliment!">
+          <input type="submit" value="Show Me My Compliment!">
         </form>
 
       </body>
@@ -224,7 +224,7 @@ def greet_person():
         <title>A Compliment</title>
       </head>
       <body>
-        Hi, {player}! I think you're {compliment}!
+        Hello, {player}! I think you're {compliment}!
       </body>
     </html>
     """
@@ -245,7 +245,7 @@ def diss_person():
       </head>
       <body>
         <p>
-          Hi, {player}! I think you're {insult}!
+          Sup, {player}! I think you're {insult}!
         </p>
       </body>
     </html>
